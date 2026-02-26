@@ -1,0 +1,14 @@
+<h2 class="catalog-title">Каталог товаров</h2>
+
+<div class="products-container">
+  <div class="product-card" *ngFor="let product of products">
+    <div class="gallery">
+      <img [src]="product.imageUrls[0]" alt="{{ product.name }}">
+    </div>
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p>⭐ {{ product.rating }}</p>
+
+    <a [routerLink]="['/product', product.id]" class="details-button">Подробнее</a>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div *ngIf="product">
+  <h1>{{ product.name }}</h1>
+  <img [src]="product.imageUrls[0]" alt="{{ product.name }}" width="300">
+  <p>{{ product.description }}</p>
+  <p>Рейтинг: ⭐ {{ product.rating }}</p>
+  <a [href]="product.link" target="_blank">Купить</a>
+</div>
+
+<div *ngIf="!product">
+  <p>Продукт не найден</p>
+</div>
